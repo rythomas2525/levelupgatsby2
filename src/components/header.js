@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import gatsbyLogo from "../images/gatsby-icon.png"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -24,10 +25,33 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <img src={gatsbyLogo} style={{ width: "100px" }} alt="Gatsby Logo" />
+        </Link>
+      </h1>
+      <h1 style={{ margin: 0 }}>
+        <Link
+          to="/about"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}
+        >
+          About
+        </Link>
+      </h1>
+      <h1 style={{ margin: 0 }}>
+        <Link
+          to="/company/team"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}
+        >
+          Team
         </Link>
       </h1>
     </div>
+
   </header>
 )
 
